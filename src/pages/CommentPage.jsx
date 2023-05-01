@@ -28,7 +28,6 @@ const CommentPage = () => {
                        paddingBottom: '35px'
                    }}>Отзывы других пользователей о TVK tattoo club</p>
                 {commentItems.map((comment) => <Comment key={comment.id} name={comment.name} text={comment.text} image={comment.image}/>)}
-
             </div>
         </div>
     );
