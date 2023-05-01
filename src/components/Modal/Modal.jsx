@@ -59,7 +59,7 @@ const Modal = ({active, setActive}) => {
                 />
                 <select  className={classes.selected} value={select} onChange={(e) => setSelect(e.target.value)}>
                     <option></option>
-                    <option value={'ЗАбабахать тату'}>Сделать тату</option>
+                    <option value={'Сделать тату'}>Сделать тату</option>
                     <option value={'Удалить тату'}>Удалить тату</option>
                     <option value={'Пирсинг'}>Пирсинг</option>
                     <option value={'Татуаж'}>Татуаж</option>
