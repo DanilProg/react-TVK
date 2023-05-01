@@ -19,6 +19,8 @@
     color: white;
     font-family: 'Lobster', cursive;
     margin: 25px 0 25px 0;
+    display: block;
+    cursor: pointer;
 }
 .nav{
     display: flex;

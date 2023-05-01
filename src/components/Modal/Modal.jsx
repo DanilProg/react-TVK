@@ -14,6 +14,7 @@ const Modal = ({active, setActive}) => {
     const [select, setSelect] = useState('')
 
     const sendFormTelegram = async (e) => {
+        setActive(!active)
         e.preventDefault()
         try {
             let message = `<b>Заявка с сайта ТВК</b>\n>`

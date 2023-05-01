@@ -30,7 +30,6 @@ const CommentPage = () => {
                 {commentItems.map((comment) => <Comment key={comment.id} name={comment.name} text={comment.text} image={comment.image}/>)}
 
             </div>
-            <div style={{paddingTop: '150px'}}></div>
         </div>
     );
 };

@@ -8,7 +8,6 @@ const Service = () => {
 
     return (
         <div className={classes.content}>
-            <h1 className={classes.title}>Услуги</h1>
             <div className={classes.card__block}>
                 {service.map((item) =>
                     <CardService

@@ -18,14 +18,11 @@ const Contact = () => {
                     <p style={{marginBottom:'15px'}}><b>Тел.</b> <span  className={classes.text}>+7 (923) 614-89-11</span><br/></p>
                     <p style={{marginBottom:'15px'}}><b>Наш адрес:</b><span  className={classes.text}>г. Юрга Ул. МАКСИМЕНКО 24</span><br/></p>
                     <p style={{marginBottom:'15px'}}><b>Часы работы:</b><span  className={classes.text}>пн-пт 10:00–18:00, сб 10:00–17:00</span><br/></p>
-
-
-
                     <div style={{display:"flex", alignItems:"center"}}>
                         <span className={classes.text}>Мы в соцсетях:</span>
-                        <Link to='https://vk.com/tvktattooclub' target='_blank'><img src={vk} style={{width:'50px', height: '25px'}}/></Link>
-                        <Link to='https://www.youtube.com/channel/UCzM7UKnSkKZpAQCKoJzZAPQ?view_as=subscriber' target='_blank'><img src={youtube}  style={{width:'50px', height: '25px'}}/></Link>
-                        <Link to='https://www.instagram.com/vadicktattoo/' target='_blank'><img src={insta}  style={{width:'50px', height: '25px'}}/></Link>
+                        <Link to='https://vk.com/tvktattooclub' target='_blank'><img src={vk} style={{width:'50px', height: '25px', cursor:'pointer'}}/></Link>
+                        <Link to='https://www.youtube.com/channel/UCzM7UKnSkKZpAQCKoJzZAPQ?view_as=subscriber' target='_blank'><img src={youtube}  style={{width:'50px', height: '25px', cursor:'pointer'}}/></Link>
+                        <Link to='https://www.instagram.com/vadicktattoo/' target='_blank'><img src={insta}  style={{width:'50px', height: '25px', cursor:'pointer'}}/></Link>
                     </div>
                 </div>
             </div>

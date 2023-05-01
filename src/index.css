@@ -17,7 +17,10 @@ button{
   font-family: 'Bruno Ace SC', cursive;
   color: #dcdada;
   position: absolute;
-  top: -80px;
+  top: -176px;
+}
+.sweet-loading{
+  width: 100%;
 }
 .bold{
   font-weight: bold;
