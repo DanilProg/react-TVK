@@ -5,14 +5,16 @@
     align-items: center;
 }
 .inner{
-    background-color: #f8f8f8;
+    background-color: #3c3b3b;
     padding: 20px;
     border-radius: 30px;
+    box-shadow: 12px 12px 2px 1px rgba(37, 32, 32, 0.2);
 }
 .title{
     text-align: center;
     font-family: 'Lobster', cursive;
     margin-bottom: 45px;
+    color: white;
 }
 .block__card{
     display: flex;

@@ -21,7 +21,6 @@ li {
 .card__block {
     display: flex;
     flex-wrap: wrap;
-    background: white;
     padding-bottom: 50px;
 }
 
@@ -31,7 +30,7 @@ li {
     margin: 15px;
     position: relative;
     border-radius: 15px;
-    box-shadow: 8px 9px 0px 4px rgba(72, 72, 74, 0.2);
+    box-shadow: 8px 9px 0px 4px rgba(2, 2, 2, 0.2);
 }
 
 .card__inner {
