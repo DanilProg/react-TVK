@@ -1,0 +1,23 @@
+.header{
+    background-color: #111423;
+    padding-bottom: 150px;
+}
+.content{
+    margin: 0 auto;
+    max-width: 1400px;
+}
+.logo{
+    width: 80px;
+    position: absolute;
+    left: -100px;
+    top: 60px;
+    z-index: 12;
+    border-radius: 50%;
+}
+.nav{
+    border-radius: 20px;
+    width: 100%;
+    background-color: rgba(255,255,255,.3);
+    display: flex;
+    justify-content: space-between;
+}

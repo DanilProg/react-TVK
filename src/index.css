@@ -1,0 +1,71 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body{
+  background-color: #e0dbdb;
+}
+button{
+  all: unset;
+}
+.main__title{
+  position: relative;
+}
+.title{
+  text-align: center;
+  font-family: 'Bruno Ace SC', cursive;
+  color: #dcdada;
+  position: absolute;
+  top: -80px;
+}
+.bold{
+  font-weight: bold;
+}
+.container{
+  margin: 0 auto;
+  max-width: 1400px;
+  background-color: white;
+  padding: 25px;
+}
+a{
+  all: unset;
+}
+.btn{
+  width: 250px;
+  height: 50px;
+  background: #2285c4;
+  color: white;
+  cursor: pointer;
+  border-radius: 10px;
+  text-align: center;
+  font-family: 'Lobster', cursive;
+  margin-bottom: 25px;
+}
+.btn-close{
+  color: red;
+  position: absolute;
+  font-size: 25px;
+  margin-left: 370px;
+  cursor: pointer;
+}
+.btn-modal{
+  margin: 25px auto;
+}
+.block {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background: black;
+  z-index: 22;
+  opacity: 0.9;
+}
+.service__title{
+  text-align: center;
+  font-size: 40px;
+  margin: 45px 0 25px 0;
+}
+.service__text{
+  font-size: 20px;
+  font-family: Arial;
+}

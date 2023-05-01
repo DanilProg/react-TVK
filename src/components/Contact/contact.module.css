@@ -1,0 +1,17 @@
+.contact{
+    position: relative;
+}
+.modal{
+    padding-top: 150px;
+    display: flex;
+    padding-bottom: 150px;
+}
+
+.text{
+    font-family: 'Lobster', cursive;
+    font-size: 17px;
+}
+.modal__inner{
+    margin-left: 50px;
+    padding: 20px;
+}

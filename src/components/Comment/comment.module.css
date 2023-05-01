@@ -1,0 +1,38 @@
+.comment{
+    background-color: #fffefe;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    border-radius: 35px;
+    width: 1000px;
+    margin: 0 auto;
+    height: 60vh;
+    overflow: auto;
+}
+.header{
+    display: flex;
+    padding: 25px;
+}
+.img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.title{
+    font-size: 20px;
+    font-family: "Sitka Small";
+}
+.text{
+    font-size: 20px;
+}
+.sub_text{
+    color: #9d9a9a;
+}
+.card{
+    background-color: #f1f0f0;
+    margin: 10px;
+    border-radius: 25px;
+    box-shadow: 12px 12px 2px 1px rgba(71, 71, 239, 0.2);
+}
+.text{
+
+}
