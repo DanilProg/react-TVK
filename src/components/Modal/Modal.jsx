@@ -13,7 +13,7 @@ const Modal = ({active, setActive}) => {
     const sendFormTelegram = async (e) => {
         e.preventDefault()
         try {
-            const res = await axios.post('http://localhost:3001/bot',
+            const res = await axios.post('https://back-tvk.vercel.app/bot',
                 {
                     name: name,
                     value: value,
