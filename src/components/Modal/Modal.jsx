@@ -2,6 +2,9 @@ import React, {useState} from 'react';
 import classes from "./modal.module.css";
 import axios from "axios";
 
+const TOKEN = '5993869459:AAGp-JUqJ8CwF9LQSiFskdq9AWV5y2rGa1E'
+const chat_id = '-1001935542586'
+const uri_api = `https://api.telegram.org/bot${TOKEN}/sendMessage`
 const Modal = ({active, setActive}) => {
     const windowsClose = () => {
       setActive(!active)
@@ -13,13 +16,15 @@ const Modal = ({active, setActive}) => {
     const sendFormTelegram = async (e) => {
         e.preventDefault()
         try {
-            const res = await axios.post('https://back-tvk.vercel.app/bot',
-                {
-                    name: name,
-                    value: value,
-                    selectOption: select
-                })
-            console.log(res.data)
+            let message = `<b>Заявка с сайта ТВК</b>\n>`
+            message += `<b>Имя того, кто отправил: </b> ${name}\n>`
+            message += `<b>Email: </b> ${value}\n>`
+            message += `<b>Процедура: </b> ${select}`
+            await axios.post(uri_api, {
+                chat_id: chat_id,
+                parse_mode: 'html',
+                text: message
+            })
         }catch (e) {
             console.log(e)
         }
