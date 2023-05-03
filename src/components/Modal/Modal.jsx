@@ -40,11 +40,11 @@ const Modal = ({active, setActive}) => {
             }else {
                 message += `<b>Услуга: </b> ${select.value}\n`
             }
-/*            await axios.post(uri_api, {
+            await axios.post(uri_api, {
                 chat_id: chat_id,
                 parse_mode: 'html',
                 text: message
-            })*/
+            })
         } catch (e) {
             console.log(e)
         }
