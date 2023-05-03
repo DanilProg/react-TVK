@@ -32,11 +32,15 @@
     .service__text{
         width: 100%;
     }
-    .image__size{
 
-    }
     .image{
         height: 400px;
         margin: 25px 0 25px 0;
     }
 }
+@media screen and (min-width: 100px) and (max-width: 450px){
+    .image__size{
+        height: 80%;
+    }
+}
+

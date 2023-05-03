@@ -1,3 +1,4 @@
+import pirsing from '../assets/image/pirsing.jpg'
 const topQuestions = [
     {
         id: '1',
@@ -88,7 +89,7 @@ const  service = [
         id: 3,
         title: 'Пирсинг',
         text: '',
-        imgUrl: 'https://tattoostation.ru/upload/iblock/0df/0df3c87b412fffbdc4dd97a696b39893.jpg',
+        imgUrl: pirsing,
         link: '/pirsing'
     },
     {

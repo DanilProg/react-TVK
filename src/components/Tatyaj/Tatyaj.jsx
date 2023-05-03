@@ -1,4 +1,5 @@
 import React from 'react';
+import tatooaj from '../assets/image/Tatooaj.jpg'
 import '../Service/service.css'
 const Tatyaj = () => {
     return (
@@ -18,7 +19,7 @@ const Tatyaj = () => {
                 </div>
 
                 <div  className='image'>
-                    <img className='img image__size' src={'http://klublady.ru/uploads/posts/2022-07/1658311159_21-klublady-ru-p-tatuazh-foto-21.jpg'}/>
+                    <img className='img image__size' src={tatooaj}/>
                 </div>
             </div>
         </div>
