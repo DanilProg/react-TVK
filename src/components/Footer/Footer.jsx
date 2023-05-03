@@ -8,11 +8,11 @@ const Footer = ({ active, setActive}) => {
     return (
         <div className={classes.footer}>
             <div className={classes.content}>
-                <div>
+                <div className={classes.header}>
                     <CustomLink to='/'><img className={classes.logo} src={logoTattoo}/></CustomLink>
                     <a className={classes.number} href='tel: +79236148911'>+7 (923) 614-89-11</a>
                 </div>
-                <div>
+                <div className={classes.inner}>
                     <h3 className={classes.title}>"TVK Tattoo Club"</h3>
                     <p className={classes.text}>Тату салон, Юрга Ул. МАКСИМЕНКО 24</p>
                     <button

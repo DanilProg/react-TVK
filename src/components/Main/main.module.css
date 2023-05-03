@@ -11,6 +11,7 @@
 .img{
     margin-right: 15px;
     max-height: 407px;
+    max-width: 538px
 }
 .sub__title{
     font-family: 'Bruno Ace SC', cursive;
@@ -21,4 +22,36 @@
     font-size: 19px;
     font-family: 'Lobster', cursive;
     text-align: center;
+}
+@media screen and (min-width: 400px) and (max-width: 1000px){
+    .main{
+        flex-direction: column;
+        align-items: center;
+    }
+    .text{
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+}
+@media screen and (min-width: 440px) and (max-width: 540px){
+    .img{
+        max-width: 350px;
+    }
+    .main{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+@media screen and (min-width: 100px) and (max-width: 440px){
+    .img{
+        max-width: 350px;
+    }
+    .main{
+        flex-direction: column;
+        align-items: center;
+    }
+    .sub__title{
+        font-size: 25px;
+        margin: 25px auto;
+    }
 }

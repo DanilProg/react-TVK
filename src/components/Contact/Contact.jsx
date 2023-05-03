@@ -9,9 +9,9 @@ const Contact = () => {
         <div className={classes.contact}>
             <h1 className='title'>Контактная информация "TVK" Club.</h1>
             <div className={classes.modal}>
-                <iframe
+                <iframe className={classes.map}
                     src="https://yandex.ru/map-widget/v1/?um=constructor%3A63f226113ff370334ed413976674ceb625e0f816e50a60d54ed559c5c36a4e0b&amp;source=constructor"
-                    width="650" height="500" frameBorder="0"/>
+                    frameBorder="0"/>
                 <div className={classes.modal__inner}>
                     <h3 style={{textAlign: "center", fontSize: '20px'}}>Наш адрес</h3>
                     <p className={classes.text}>Работа в  тату салоне происходит по предварительной записи:</p>

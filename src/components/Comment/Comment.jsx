@@ -6,8 +6,8 @@ const Comment = ({image,name,text}) => {
         <div className={classes.card}>
             <div className={classes.header}>
                 <img src={image} className={classes.img}/>
-                <div style={{marginLeft: '15px'}}>
-                    <p className={classes.title}>{name}</p>
+                <div className={classes.title}>
+                    <p className={classes.title__text}>{name}</p>
                 </div>
             </div>
             <p  style={{

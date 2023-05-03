@@ -31,9 +31,19 @@
     display: flex;
     max-width: 1400px;
     flex-wrap: wrap;
+    justify-content: space-evenly;
     margin-bottom: 60px;
 }
 .image__item{
     width: 300px;
     margin: 0 30px 20px 0;
+}
+@media screen and (min-width: 710px) and (max-width: 950px){
+    .card{
+        width: 100%;
+    }
+    .inner{
+        display: flex;
+        align-items: center;
+    }
 }

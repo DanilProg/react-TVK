@@ -1,5 +1,6 @@
 import React from 'react';
 import Main from "../components/Main/Main";
+import 'swiper/swiper.min.css'
 
 
 const MainPage = () => {

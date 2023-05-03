@@ -1,0 +1,41 @@
+.burger{
+    display: none;
+}
+.logo{
+    width: 50px;
+    height: 80px;
+    margin: 0 50px 0 50px;
+    cursor: pointer;
+}
+.logo:active{
+    opacity: 0.4;
+}
+.nav{
+    display: flex;
+    flex-direction: column;
+}
+.link{
+    margin: 20px 50px;
+    color: #ffffff;
+    cursor: pointer;
+}
+.btn{
+    color: red;
+    position: absolute;
+    font-size: 25px;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+.modal{
+    width: 350px;
+    background: #545454;
+    z-index: 10;
+    top: 0;
+    border-radius: 0 25px 25px 0;
+    position: fixed;
+}
+
+@media screen and (min-width: 100px) and (max-width: 820px){
+    .burger{display: block}
+}

@@ -34,6 +34,17 @@ button{
 a{
   all: unset;
 }
+
+.btn-close{
+  color: red;
+  position: absolute;
+  font-size: 25px;
+  margin-left: 370px;
+  cursor: pointer;
+}
+.btn-modal{
+  margin: 25px auto;
+}
 .btn{
   width: 250px;
   height: 50px;
@@ -44,16 +55,6 @@ a{
   text-align: center;
   font-family: 'Lobster', cursive;
   margin-bottom: 25px;
-}
-.btn-close{
-  color: red;
-  position: absolute;
-  font-size: 25px;
-  margin-left: 370px;
-  cursor: pointer;
-}
-.btn-modal{
-  margin: 25px auto;
 }
 .block {
   position: absolute;
@@ -71,4 +72,15 @@ a{
 .service__text{
   font-size: 20px;
   font-family: Arial;
+}
+
+@media screen and (min-width: 500px) and (max-width: 850px){
+  .btn{
+    margin-bottom: 10px;
+  }
+}
+@media screen and (min-width: 100px) and (max-width: 430px){
+  .title{
+    font-size: 16px;
+  }
 }
