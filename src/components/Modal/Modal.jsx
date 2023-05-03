@@ -22,7 +22,7 @@ const Modal = ({active, setActive}) => {
        setPhone(e.target.value)
        const re = /^\+?[78][-\(]?\d{3}\)?-?\d{3}-?\d{2}-?\d{2}$/
        if(!re.test(String(e.target.value).toLowerCase())){
-           setPhoneError('Неккоретный номер телефона')
+           setPhoneError('Некорректный номер телефона')
        }else{
            setPhoneError('')
        }
@@ -108,20 +108,3 @@ const Modal = ({active, setActive}) => {
 };
 
 export default Modal;
-
-
-/*           <select
-                className={classes.selected}
-                value={select}
-                onChange={(e) => setSelect(e.target.value)}>
-<option>Выбрать услугу</option>
-<option value={'Сделать тату'}>Сделать тату</option>
-<option value={'Удалить тату'}>Удалить тату</option>
-<option value={'Пирсинг'}>Пирсинг</option>
-<option value={'Татуаж'}>Татуаж</option>
-<option value={'Консультация'}>Консультация</option>
-<option value={'Своя услга'}>Своя услуга</option>
-            </select>*/
-
-/*
-*/
