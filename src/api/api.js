@@ -1,10 +1,10 @@
 import axios from "axios";
 
 export const api = axios.create({
-    baseURL: `http://localhost:3001/`
+    baseURL: `https://back-tvk.vercel.app/`
 })
 
 /*
-https://back-tvk.vercel.app/
 
+http://localhost:3001/
 */
