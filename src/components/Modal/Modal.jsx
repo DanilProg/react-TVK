@@ -18,9 +18,9 @@ const Modal = ({active, setActive}) => {
         e.preventDefault()
         try {
             let message = `<b>Заявка с сайта ТВК</b>\n>`
-            message += `<b>Имя того, кто отправил: </b> ${name}\n>`
-            message += `<b>Номер телефона: </b> ${value}\n>`
-            message += `<b>Процедура: </b> ${select}`
+            message += `<b>Имя заказчика: </b> ${name}\n>`
+            message += `<b>Телефон: </b> ${value}\n>`
+            message += `<b>Услуга: </b> ${select}`
             await axios.post(uri_api, {
                 chat_id: chat_id,
                 parse_mode: 'html',
