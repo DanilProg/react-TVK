@@ -4,6 +4,6 @@ export const options = [
     { value: 'Пирсинг', label: 'Пирсинг' },
     { value: 'Татуаж', label: 'Татуаж' },
     { value: 'Консультация', label: 'Консультация' },
-    { value: 'Своя услуга', label: 'Своя услга' },
+    { value: 'Своя услуга', label: 'Своя услуга' },
 ]
 

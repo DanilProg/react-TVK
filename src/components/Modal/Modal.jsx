@@ -14,29 +14,37 @@ const Modal = ({active, setActive}) => {
         setActive(!active)
     }
     const [name, setName] = useState('')
-    const [value, setValue] = useState('')
-    const [select, setSelect] = useState('выбрать')
+    const [phone, setPhone] = useState('')
+    const [phoneError, setPhoneError] = useState('Поле телефона не может быть пустым')
+    const [select, setSelect] = useState('')
     const [text, setText] = useState('')
-    const sel = select ? '>' : ''
+   const validPhone = (e) => {
+       setPhone(e.target.value)
+       const re = /^\+?[78][-\(]?\d{3}\)?-?\d{3}-?\d{2}-?\d{2}$/
+       if(!re.test(String(e.target.value).toLowerCase())){
+           setPhoneError('Неккоретный номер телефона')
+       }else{
+           setPhoneError('')
+       }
+   }
     const sendFormTelegram = async (e) => {
         setActive(!active)
         e.preventDefault()
         try {
             let message = `<b>Заявка с сайта TVK</b>\n>`
             message += `<b>Имя заказчика: </b> ${name}\n>`
-            message += `<b>Телефон: </b> ${value}\n>`
-
+            message += `<b>Телефон: </b> ${phone}\n>`
             if (select.value === 'Своя услуга') {
                 message += `<b>Услуга: </b> ${select.value}\n>`
                 message += `<b>Описание услуги: </b> ${text}`
             }else {
                 message += `<b>Услуга: </b> ${select.value}\n`
             }
-            await axios.post(uri_api, {
+/*            await axios.post(uri_api, {
                 chat_id: chat_id,
                 parse_mode: 'html',
                 text: message
-            })
+            })*/
         } catch (e) {
             console.log(e)
         }
@@ -60,19 +68,21 @@ const Modal = ({active, setActive}) => {
                 value={name}
                 onChange={(e) => setName(e.target.value)}
             />
+            {(phone && phoneError) && <p>{phoneError}</p>}
             <input
                 className={classes.input}
                 placeholder='Номер телефона'
-                type='phone'
-                name='phone'
-                value={value}
-                onChange={(e) => setValue(e.target.value)}
+                type='tel'
+                name='tel'
+                maxLength={12}
+                value={phone}
+                onChange={(e) => validPhone(e)}
             />
             <Select
                 defaultValue={select}
                 onChange={setSelect}
                 options={options}
-                placeholder='Выберите услгу'
+                placeholder='Выберите услугу'
                 className={classes.selected}
             />
             {
