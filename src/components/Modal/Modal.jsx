@@ -19,7 +19,7 @@ const Modal = ({active, setActive}) => {
         try {
             let message = `<b>Заявка с сайта ТВК</b>\n>`
             message += `<b>Имя того, кто отправил: </b> ${name}\n>`
-            message += `<b>Email: </b> ${value}\n>`
+            message += `<b>Номер телефона: </b> ${value}\n>`
             message += `<b>Процедура: </b> ${select}`
             await axios.post(uri_api, {
                 chat_id: chat_id,
@@ -51,9 +51,9 @@ const Modal = ({active, setActive}) => {
                 />
                 <input
                     className={classes.input}
-                    placeholder='Email'
-                    type='email'
-                    name='email'
+                    placeholder='Номер телефона'
+                    type='phone'
+                    name='phone'
                     value={value}
                     onChange={(e) => setValue(e.target.value)}
                 />
