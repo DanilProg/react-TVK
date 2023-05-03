@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import classes from "./modal.module.css";
 import axios from "axios";
-
+import close from '../assets/image/close-circle-svgrepo-com.svg'
 const TOKEN = '5993869459:AAGp-JUqJ8CwF9LQSiFskdq9AWV5y2rGa1E'
 const chat_id = '-1001935542586'
 const uri_api = `https://api.telegram.org/bot${TOKEN}/sendMessage`
@@ -37,10 +37,9 @@ const Modal = ({active, setActive}) => {
                 onClick={(e) => e.stopPropagation()}
                 >
                 <button
-                    className='btn-close'
                     type='submit'
                     onClick={() => windowsClose()}
-                >X</button>
+                ><img src={close} className='btn-close'/></button>
                 <input
                     className={classes.input}
                     style={{marginTop: '55px'}}

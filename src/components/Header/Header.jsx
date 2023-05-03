@@ -6,22 +6,12 @@ import BurgerMenu from "../BurgerMenu/BurgerMenu";
 
 
 const Header = () => {
-    const [width, setWidth] = useState(window.innerWidth)
-    useEffect(() => {
-        function handleWidht() {
-            setWidth(window.innerWidth)
-        }
-        window.addEventListener('resize', handleWidht)
-        return () => {
-            window.removeEventListener('resize', handleWidht)
-        }
-    }, [])
     return (
         <div className={classes.header}>
             <div className={classes.content}>
                 <BurgerMenu/>
                 <CustomLink to='/'><img className={classes.logo} src={logoTattoo}/></CustomLink>
-                <nav className={width ? classes.nav : 'none'}>
+                <nav className={classes.nav}>
                     <CustomLink propsClass={classes.links} to='/'>ГЛАВНАЯ</CustomLink>
                     <CustomLink propsClass={classes.links} to='/masters'>МАСТЕРА</CustomLink>
                     <CustomLink propsClass={classes.links} to='/services'>УСЛУГИ</CustomLink>

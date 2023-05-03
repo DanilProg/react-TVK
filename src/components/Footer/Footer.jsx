@@ -15,10 +15,11 @@ const Footer = ({ active, setActive}) => {
                 <div className={classes.inner}>
                     <h3 className={classes.title}>"TVK Tattoo Club"</h3>
                     <p className={classes.text}>Тату салон, Юрга Ул. МАКСИМЕНКО 24</p>
-                    <button
-                        className='btn'
-                        onClick={() => setActive(!active)}
-                    >Записать онлайн</button>
+                        <button
+                            className='btn'
+                            onClick={() => setActive(!active)}
+                        >Запись онлайн <span className="flare"></span></button>
+
                     <p className={classes.text}>Ограничение по возрасту 18+</p>
                 </div>
                 <div className={classes.nav}>

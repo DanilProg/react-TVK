@@ -10,10 +10,7 @@ const BurgerMenu = () => {
     return (
         <div className={classes.burger}>
             <button onClick={() => setActive(!active)}><img src={Burger} className={classes.logo}/></button>
-            {active ?
                 <BurgerModal active={active} setActive={setActive} />
-                :
-                ''
             }
         </div>
     );

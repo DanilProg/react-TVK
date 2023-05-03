@@ -44,3 +44,10 @@
     font-family: 'Lobster', cursive;
     border-radius: 25px;
 }
+@media screen and (min-width: 100px) and (max-width: 500px){
+    .form{
+        width: 300px;
+        left: -40px;
+    }
+
+}
