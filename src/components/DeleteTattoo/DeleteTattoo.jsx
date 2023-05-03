@@ -1,17 +1,14 @@
 import React from 'react';
-
+import '../Service/service.css'
 const DeleteTattoo = () => {
     return (
         <div className='service__content'>
             <h1 className='service__title'>Удаление тату лазером</h1>
-            <div style={{
-                display: 'flex',
-                justifyContent:'space-between'
-            }}>
-                <div>
-                    <p className='service__text'>Лазерное удаление татуировок в  Юрге по приемлемой цене у нас, в студии «TVK».</p>
+            <div className='service__inner'>
+                <div className='service__text'>
+                    <p className='text'>Лазерное удаление татуировок в  Юрге по приемлемой цене у нас, в студии «TVK».</p>
                     <br/>
-                    <p className='service__text'>В вопросах удаления тату важны несколько составляющих:</p>
+                    <p className='text'>В вопросах удаления тату важны несколько составляющих:</p>
                     <br/>
                     <ul className='service__list'>
                         <li>современное оборудование отличного качества</li>
@@ -28,15 +25,10 @@ const DeleteTattoo = () => {
                     </ul>
                 </div>
 
-                <div>
-                    <img src={'https://sun9-66.userapi.com/impg/OXXfLsTU3Ja8B3Xlysy487e3Xmt-_Z1kWJ0CxQ/mRBCkRnLkVg.jpg?size=510x543&quality=96&sign=bf8ff1a715bcf37a222c5bbf6dea7d9c&type=album'}/>
+                <div className='image'>
+                    <img className='img image__size'  src={'https://sun9-66.userapi.com/impg/OXXfLsTU3Ja8B3Xlysy487e3Xmt-_Z1kWJ0CxQ/mRBCkRnLkVg.jpg?size=510x543&quality=96&sign=bf8ff1a715bcf37a222c5bbf6dea7d9c&type=album'}/>
                 </div>
-
             </div>
-            <p className='service__text'>У нас есть опыт, знания, возможности, оборудование. Есть все, чтобы Вы сделали тату, и она Вас радовала бесконечно. Посмотрите на наши работы на сайте. И это при условии, что фотографии, к сожалению, не передают всей красоты работы мастера.</p>
-            <br/>
-            <p className='service__text'>Звоните, пишите, администраторы ответят на все вопросы.</p>
-            <br/>
         </div>
     );
 };

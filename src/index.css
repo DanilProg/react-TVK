@@ -45,15 +45,7 @@ a{
   z-index: 22;
   opacity: 0.9;
 }
-.service__title{
-  text-align: center;
-  font-size: 40px;
-  margin: 45px 0 25px 0;
-}
-.service__text{
-  font-size: 20px;
-  font-family: Arial;
-}
+
 
 @media screen and (min-width: 500px) and (max-width: 850px){
   .btn{

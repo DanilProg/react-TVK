@@ -18,7 +18,7 @@ const CardService = ({title, text, image, link}) => {
                 <p className={classes.card__text}>{text}</p>
             </div>
             <CustomLink to={link}>
-                <button className={classes.card__btn}>Побробнее</button>
+                <button className={classes.card__btn}>Подробнее</button>
             </CustomLink>
         </div>
     );

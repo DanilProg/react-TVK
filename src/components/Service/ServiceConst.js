@@ -69,7 +69,7 @@ const topQuestions = [
             '\n'
     },
 ]
-const service = [
+const  service = [
     {
         id: 1,
         title: 'Сделать тату',
