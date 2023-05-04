@@ -47,7 +47,6 @@ const Modal = ({active, setActive}) => {
             message += `<b>Имя заказчика: </b> ${name}\n>`
             message += `<b>Телефон: </b> ${phone}\n>`
             if (select.value === 'Своя услуга') {
-                message += `<b>Услуга: </b> ${select.value}\n>`
                 message += `<b>Описание услуги: </b> ${text}`
             } else {
                 message += `<b>Услуга: </b> ${select.value}\n`
