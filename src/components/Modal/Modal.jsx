@@ -4,32 +4,44 @@ import axios from "axios";
 import close from '../assets/image/close-circle-svgrepo-com.svg'
 import {options} from "./optionsSelect";
 import Select from "react-select";
+import {phoneValidation} from "./validation";
 
 const TOKEN = '5993869459:AAGp-JUqJ8CwF9LQSiFskdq9AWV5y2rGa1E'
 const chat_id = '-1001935542586'
 const uri_api = `https://api.telegram.org/bot${TOKEN}/sendMessage`
 
 const Modal = ({active, setActive}) => {
+    const [name, setName] = useState('')
+    const [errorName, setErrorName] = useState('')
+    const [phone, setPhone] = useState('')
+    const [phoneError, setPhoneError] = useState('')
+    const [select, setSelect] = useState('')
+    const [errorSelect, setErrorSelect] = useState('')
+    const [text, setText] = useState('')
+
     const windowsClose = () => {
         setActive(!active)
     }
-    const [name, setName] = useState('')
-    const [phone, setPhone] = useState('')
-    const [phoneError, setPhoneError] = useState('Поле телефона не может быть пустым')
-    const [select, setSelect] = useState('')
-    const [text, setText] = useState('')
-   const validPhone = (e) => {
-       setPhone(e.target.value)
-       const re = /^\+?[78][-\(]?\d{3}\)?-?\d{3}-?\d{2}-?\d{2}$/
-       if(!re.test(String(e.target.value).toLowerCase())){
-           setPhoneError('Некорректный номер телефона')
-       }else{
-           setPhoneError('')
-       }
-   }
     const sendFormTelegram = async (e) => {
-        setActive(!active)
         e.preventDefault()
+        setPhoneError('')
+        setErrorName('')
+        setErrorSelect('')
+        const valueError = phoneValidation(phone, setPhoneError)
+        if(valueError){
+            setPhoneError(valueError)
+            return setPhoneError(valueError)
+        }
+        if (select){
+             setErrorName('')
+        }else {
+            return setErrorSelect('Обязательное поле')
+        }
+        if(name.length > 2){
+             setErrorName('')
+        }else {
+            return setErrorName('Обязательное поле')
+        }
         try {
             let message = `<b>Заявка с сайта TVK</b>\n>`
             message += `<b>Имя заказчика: </b> ${name}\n>`
@@ -37,18 +49,21 @@ const Modal = ({active, setActive}) => {
             if (select.value === 'Своя услуга') {
                 message += `<b>Услуга: </b> ${select.value}\n>`
                 message += `<b>Описание услуги: </b> ${text}`
-            }else {
+            } else {
                 message += `<b>Услуга: </b> ${select.value}\n`
             }
-            await axios.post(uri_api, {
-                chat_id: chat_id,
-                parse_mode: 'html',
-                text: message
-            })
+/*                        await axios.post(uri_api, {
+                            chat_id: chat_id,
+                            parse_mode: 'html',
+                            text: message
+                        })*/
+            setActive(!active)
         } catch (e) {
             console.log(e)
         }
     }
+
+
     return (
 
         <form
@@ -59,7 +74,9 @@ const Modal = ({active, setActive}) => {
                 type='submit'
                 onClick={() => windowsClose()}
             ><img src={close} className='btn-close'/></button>
+            {errorName ? <div style={{color: 'red', position:'absolute', top:'30px'}}>{errorName}</div> : ''}
             <input
+                required={true}
                 className={classes.input}
                 style={{marginTop: '55px'}}
                 placeholder='Имя'
@@ -68,7 +85,7 @@ const Modal = ({active, setActive}) => {
                 value={name}
                 onChange={(e) => setName(e.target.value)}
             />
-            {(phone && phoneError) && <p>{phoneError}</p>}
+            {phoneError ? <div style={{color: 'red'}}>{phoneError}</div> : ''}
             <input
                 className={classes.input}
                 placeholder='Номер телефона'
@@ -76,8 +93,9 @@ const Modal = ({active, setActive}) => {
                 name='tel'
                 maxLength={12}
                 value={phone}
-                onChange={(e) => validPhone(e)}
+                onChange={(e) => setPhone(e.target.value.replace(/[^+\d]/g, ""))}
             />
+            {errorSelect ? <div style={{color: 'red'}}>{errorSelect}</div> : ''}
             <Select
                 defaultValue={select}
                 onChange={setSelect}
@@ -108,3 +126,5 @@ const Modal = ({active, setActive}) => {
 };
 
 export default Modal;
+/*
+/^\+?[78][-\(]?\d{3}\)?-?\d{3}-?\d{2}-?\d{2}$/*/
