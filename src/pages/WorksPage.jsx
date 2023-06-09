@@ -7,20 +7,19 @@ import classes from "../components/Works/works.module.css";
 import {Outlet} from "react-router-dom";
 import ClipLoader from "react-spinners/ClipLoader";
 import {Swiper, SwiperSlide} from "swiper/react";
-import {Navigation, Pagination, Scrollbar, A11y} from "swiper";
-
+import {Navigation, Pagination} from "swiper";
 const override = {
     display: "block",
     margin: "0 auto",
     borderColor: "red",
 };
+
 const WorksPage = () => {
     const [width, setWidth] = useState(window.innerWidth)
     useEffect(() => {
         function handleWidht() {
             setWidth(window.innerWidth)
         }
-
         window.addEventListener('resize', handleWidht)
         return () => {
             window.removeEventListener('resize', handleWidht)
@@ -37,7 +36,6 @@ const WorksPage = () => {
             const [, ...photos] = data.response.items
             setPhotos(photos)
             setIsLoading(false)
-            console.log(data.response.items)
         } catch (e) {
             console.log(e)
         }

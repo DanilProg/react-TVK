@@ -1,8 +1,7 @@
-import React, {createContext, useContext, useState} from 'react';
+import React, {useState} from 'react';
 import RoutPage from "./components/RoutPages/RoutPage";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
-import Modal from "./components/Modal/Modal";
 
 
 const App = () => {

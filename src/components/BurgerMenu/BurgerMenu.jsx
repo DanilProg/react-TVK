@@ -6,7 +6,6 @@ import BurgerModal from "./BurgerModal";
 
 const BurgerMenu = () => {
     const [active, setActive] = useState(true)
-
     return (
         <div className={classes.burger}>
             <button onClick={() => setActive(!active)}><img src={Burger} className={classes.logo}/></button>
